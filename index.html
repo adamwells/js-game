@@ -10,6 +10,7 @@
 		<script type="application/javascript" src="lib/moveable.js"></script>
 		<script type="application/javascript" src="lib/ship.js"></script>
 		<script type="application/javascript" src="lib/game.js"></script>
+		<script type="application/javascript" src="lib/game_view.js"></script>
 
 		<script type="application/javascript">
       (function () {
@@ -18,6 +19,8 @@
         canvas.height = Relativity.Game.HEIGHT;
 
         var ctx = canvas.getContext("2d");
+        var game = new Relativity.Game();
+        new Relativity.GameView(game, ctx).start();
       })();
     </script>
 	</body>
