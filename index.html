@@ -18,11 +18,11 @@
 		<script type="application/javascript">
       (function () {
         var canvas = document.getElementById("game");
-        canvas.width = Relativity.Game.WIDTH;
-        canvas.height = Relativity.Game.HEIGHT;
+        canvas.width = Relativity.GameView.WIDTH;
+        canvas.height = Relativity.GameView.HEIGHT;
 
         var ctx = canvas.getContext("2d");
-        var game = new Relativity.Game();
+        var game = new Relativity.Game({ width: Relativity.GameView.WIDTH, height: Relativity.GameView.HEIGHT });
         new Relativity.GameView(game, ctx).start();
       })();
     </script>
